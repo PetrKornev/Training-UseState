@@ -18,7 +18,8 @@ const ShoppingCart = () => {
     const deleteAllCart = () => {
         setCart (() => [])
     }
-    return <div>
+    return <div> 
+        <h1>Список покупок</h1>
         {cart.map((item) => (
             <li>№{item.id} Товар: {item.title}, кол-во: {item.count}</li>
         ))}

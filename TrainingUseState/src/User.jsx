@@ -8,13 +8,13 @@ const User = () => {
         isActive: true,
     });
     const changeName = () => {
-        setUser ((oldUser) => ({...oldUser, name: oldUser.name = 'Пётр'}))
+        setUser((oldUser) => ({ ...oldUser, name: 'Пётр' }))
     }
     const changeAge = () => {
-        setUser ((oldUser) => ({...oldUser, age: oldUser.age + 1}))
+        setUser((oldUser) => ({ ...oldUser, age: oldUser.age + 1 }))
     }
     const changeActivity = () => {
-        setUser ((oldUser) => ({...oldUser, isActive : !oldUser.isActive }))
+        setUser((oldUser) => ({ ...oldUser, isActive: !oldUser.isActive }))
     }
 
     return <>
@@ -22,7 +22,7 @@ const User = () => {
         <h1>Профиль пользователя</h1>
         <p>Имя: {user.name}</p>
         <p>Возраст: {user.age}</p>
-        <p>Активен: {user.isActive? 'Да' : 'Нет'}</p>
+        <p>Активен: {user.isActive ? 'Да' : 'Нет'}</p>
         <button onClick={changeName}>Сменить имя</button>
         <button onClick={changeAge}>Увеличить возраст</button>
         <button onClick={changeActivity}>Переключить активность</button>
